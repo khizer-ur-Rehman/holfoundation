@@ -5,25 +5,13 @@ const logo = `<img src="${root}assets/images/logo/hol-logo.png" alt="HOL Foundat
 const footerLogo = '<img src="' + root + 'assets/images/logo/hol-footer-logo.png" alt="HOL Foundation" width="178" height="202">';
 const header = `<header class="site-header"><div class="container header-inner"><a class="brand" href="${root}index.html">${logo}</a><nav class="main-navigation" aria-label="Main navigation">${nav.map(([n,h])=>link(n,h)).join('')}</nav><a class="button gold" href="${root}donate.html">Donate Now <span aria-hidden="true">&#8599;</span></a><button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav">&#9776;</button></div><nav id="mobile-nav" class="mobile-panel" aria-label="Mobile navigation">${nav.map(([n,h])=>link(n,h)).join('')}<a class="button gold" href="${root}donate.html">Donate Now</a></nav></header>`;
 const footer = '<footer class="site-footer"><div class="container">' +
-  '<section class="footer-invite" aria-labelledby="footer-invite-title"><div class="footer-invite-copy"><span class="footer-invite-eyebrow"><i aria-hidden="true"></i> Learn · Grow · Together</span><h2 id="footer-invite-title">Help opportunity reach every child.</h2></div><p>Your support brings education and new possibilities closer to families in Lyari.</p><a class="footer-donate-button" href="' + root + 'donate.html"><span>Donate to HOL</span><i aria-hidden="true">&#8599;</i></a><span class="footer-invite-orbit" aria-hidden="true"></span></section>' +
   '<div class="footer-grid">' +
-    '<div class="footer-identity"><a class="footer-brand" href="' + root + 'index.html">' + footerLogo + '</a><p>Working with our community to make learning, health and essential support easier to reach.</p><span class="footer-place"><i aria-hidden="true"></i> Lyari, Karachi</span></div>' +
-    '<nav class="footer-column" aria-label="Explore"><h3>Explore</h3><div class="footer-links">' + nav.map(([n,h])=>link(n,h)).join('') + '<a href="' + root + 'board-of-directors.html">Board of Directors</a></div></nav>' +
-    '<div class="footer-column"><h3>Our programs</h3><div class="footer-links">' + link('Lyari Entrepreneur Academy','programs/lyari-entrepreneur-academy.html') + link('School Preparatory Program','programs/school-preparatory-program.html') + link('HOL KB Campus','programs/hol-kb-campus.html') + link('HOL Preschool','programs/hol-preschool.html') + '</div></div>' +
-    '<div class="footer-column footer-contact"><h3>Get in touch</h3><address>Bukhari Terrace, Mezzanine Floor,<br>Opp. Mariam Masjid, Fida Hussain Shaikha Road,<br>Lyari, Karachi</address><a class="footer-contact-link" href="tel:+923226300144"><i aria-hidden="true">&#9742;</i><span><small>Call our team</small><strong>+92 322 6300144</strong></span></a><a class="footer-contact-link" href="mailto:info@holwelfare.org"><i aria-hidden="true">&#9993;</i><span><small>Email us</small><strong>info@holwelfare.org</strong></span></a></div>' +
-  '</div><div class="footer-bottom"><p class="copyright">&#169; <span data-year></span> HOL Foundation. All rights reserved.</p><span class="footer-bottom-note">Education <i></i> Opportunity <i></i> Community</span><a href="' + root + 'index.html" class="footer-home-link">HOL Foundation home <span aria-hidden="true">&#8599;</span></a></div>' +
-'</div></footer>';
-document.querySelector('[data-site-header]')?.insertAdjacentHTML('afterbegin', header);
+    '<div class="footer-identity"><a class="footer-brand" href="' + root + 'index.html">' + footerLogo + '</a><p>Learning and opportunity in Lyari.</p><span class="footer-place"><i aria-hidden="true"></i> Lyari, Karachi</span></div>' +
+    '<div class="footer-column footer-contact"><h3>Get in touch</h3><address>Lyari, Karachi, Pakistan</address><a class="footer-contact-link" href="tel:+923226300144"><i aria-hidden="true">&#9742;</i><span><small>Call our team</small><strong>+92 322 6300144</strong></span></a><a class="footer-contact-link" href="mailto:info@holwelfare.org"><i aria-hidden="true">&#9993;</i><span><small>Email us</small><strong>info@holwelfare.org</strong></span></a></div>' +
+    '<nav class="footer-column footer-explore" aria-label="Explore HOL"><h3>Explore HOL</h3><div class="footer-links">' + link('Home','index.html') + link('About us','about.html') + link('Our work','our-work.html') + link('Donate','donate.html') + '</div></nav>' +
+  '</div><div class="footer-bottom"><p class="copyright">&#169; <span data-year></span> HOL Foundation. All rights reserved.</p><span class="footer-bottom-note">Lyari <i></i> Since 2014</span><a href="' + root + 'contact.html" class="footer-home-link">Contact us <span aria-hidden="true">&#8599;</span></a></div>' +
+'</div></footer>';document.querySelector('[data-site-header]')?.insertAdjacentHTML('afterbegin', header);
 document.querySelector('[data-site-footer]')?.insertAdjacentHTML('afterbegin', footer);
-const marqueeSection = `<section class="home-marquee" aria-label="Education, support, health and donate"><div class="marquee-window"><div class="marquee-track"><div class="marquee-group"><span class="marquee-word marquee-outline">Education</span><span class="marquee-dot" aria-hidden="true"></span><span class="marquee-word">Support</span><span class="marquee-dot" aria-hidden="true"></span><span class="marquee-word marquee-outline">Health</span><span class="marquee-dot" aria-hidden="true"></span><span class="marquee-word">Donate</span><span class="marquee-dot" aria-hidden="true"></span></div><div class="marquee-group" aria-hidden="true"><span class="marquee-word marquee-outline">Education</span><span class="marquee-dot"></span><span class="marquee-word">Support</span><span class="marquee-dot"></span><span class="marquee-word marquee-outline">Health</span><span class="marquee-dot"></span><span class="marquee-word">Donate</span><span class="marquee-dot"></span></div></div></div></section>`;
-if(document.querySelector('.home-page-main')){
-  document.querySelector('.journey-section')?.insertAdjacentHTML('afterend',marqueeSection);
-  (document.querySelector('.cta-band.cta-donate')||document.querySelector('[data-site-footer]'))?.insertAdjacentHTML('beforebegin',marqueeSection);
-}else{
-  const contentSections=[...document.querySelectorAll('main > section')];
-  if(contentSections.length){contentSections[Math.floor(contentSections.length/2)]?.insertAdjacentHTML('afterend',marqueeSection)}
-  else document.querySelector('[data-site-footer]')?.insertAdjacentHTML('beforebegin',marqueeSection);
-}
 const toggle = document.querySelector('.menu-toggle');
 toggle?.addEventListener('click', () => { const panel=document.querySelector('.mobile-panel'); const opened=panel.classList.toggle('open'); toggle.setAttribute('aria-expanded',String(opened)); toggle.setAttribute('aria-label',opened?'Close navigation':'Open navigation'); toggle.textContent=opened?String.fromCharCode(215):String.fromCharCode(9776); });
 document.querySelectorAll('form[data-local-form]').forEach(form=>form.addEventListener('submit',event=>{event.preventDefault(); const note=form.querySelector('[data-form-message]'); if(note) note.textContent='Thank you for reaching out. Please email info@holwelfare.org to complete your request.';}));
@@ -37,3 +25,40 @@ document.querySelectorAll('.main-navigation a, .mobile-panel a').forEach(a=>{if(
 if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}}),{threshold:.12});document.querySelectorAll('.section-header,.values-heading,.strive-path,.value-stop,.stat,.program-card,.story-panel,.impact-story-copy,.impact-photo-main,.impact-photo-secondary,.founder-photo,.founder-copy,.info-card,.timeline-item,.cta-donate-copy,.about-story-visual,.about-story-copy,.work-reframe-header,.work-reframe-image,.work-reframe-content,.work-program-list li,.home-story-card,.journey-list,.journey-list li').forEach(el=>{el.classList.add('reveal');observer.observe(el)})}
 const heroSlides=[...document.querySelectorAll('.hero-slide')];
 if(heroSlides.length>1){let activeSlide=0;let autoplay=null;let paused=false;const dots=[...document.querySelectorAll('[data-slide-index]')];const pause=document.querySelector('[data-slide-toggle]');const showSlide=index=>{activeSlide=(index+heroSlides.length)%heroSlides.length;heroSlides.forEach((slide,i)=>{const active=i===activeSlide;slide.classList.toggle('is-active',active);slide.setAttribute('aria-hidden',String(!active));slide.inert=!active});dots.forEach((dot,i)=>{const active=i===activeSlide;dot.classList.toggle('is-active',active);dot.setAttribute('aria-current',String(active));dot.setAttribute('aria-label','Show slide '+(i+1))})};const startAutoplay=()=>{window.clearInterval(autoplay);if(!paused&&!document.hidden)autoplay=window.setInterval(()=>showSlide(activeSlide+1),5000)};document.querySelector('[data-slide-prev]')?.addEventListener('click',()=>{showSlide(activeSlide-1);startAutoplay()});document.querySelector('[data-slide-next]')?.addEventListener('click',()=>{showSlide(activeSlide+1);startAutoplay()});dots.forEach(dot=>dot.addEventListener('click',()=>{showSlide(Number(dot.dataset.slideIndex));startAutoplay()}));pause?.addEventListener('click',()=>{paused=!paused;pause.textContent=paused?'Play':'Pause';pause.setAttribute('aria-label',paused?'Resume automatic slides':'Pause automatic slides');if(paused)window.clearInterval(autoplay);else startAutoplay()});document.addEventListener('visibilitychange',()=>{if(document.hidden)window.clearInterval(autoplay);else startAutoplay()});showSlide(0);startAutoplay()}
+
+/* Interactive STRIVE values */
+const striveValueCopy = {
+  strength: {letter:'S',number:'01',name:'Strength',headline:'Build on what is already strong.',description:'We recognize the talent, resilience and knowledge within Lyari, then help people turn those strengths into opportunities to learn and grow.'},
+  tenacity: {letter:'T',number:'02',name:'Tenacity',headline:'Stay committed, even when progress takes time.',description:'We keep showing up, adapt when challenges arise and celebrate each step as learners and families move forward.'},
+  respect: {letter:'R',number:'03',name:'Respect',headline:'Listen first. Treat every person with dignity.',description:'We honor each person\'s voice, background and choices, and work alongside the community as a trusted partner.'},
+  integrity: {letter:'I',number:'04',name:'Integrity',headline:'Earn trust by following through.',description:'We communicate honestly, act responsibly and take care with the trust people place in HOL Foundation.'},
+  vision: {letter:'V',number:'05',name:'Vision',headline:'See possibility, then create a path to it.',description:'We connect education and practical skills to help children, young people and families shape brighter futures.'},
+  empathy: {letter:'E',number:'06',name:'Empathy',headline:'Understand people before deciding how to help.',description:'We listen with care and respond to the real circumstances, hopes and needs of each person and family.'}
+};
+const striveButtons = [...document.querySelectorAll('.value-select[data-strive-value]')];
+const striveDetail = document.querySelector('#strive-detail');
+if (striveButtons.length && striveDetail) {
+  const detailLetter = striveDetail.querySelector('[data-strive-detail-letter]');
+  const detailEyebrow = striveDetail.querySelector('[data-strive-detail-eyebrow]');
+  const detailTitle = striveDetail.querySelector('[data-strive-detail-title]');
+  const detailDescription = striveDetail.querySelector('[data-strive-detail-description]');
+  striveButtons.forEach(button => button.addEventListener('click', () => {
+    const value = striveValueCopy[button.dataset.striveValue];
+    if (!value) return;
+    striveButtons.forEach(option => {
+      const selected = option === button;
+      option.setAttribute('aria-pressed', String(selected));
+      option.closest('.value-stop')?.classList.toggle('is-selected', selected);
+    });
+    detailLetter.textContent = value.letter;
+    detailEyebrow.textContent = value.number + ' / 06 \u00B7 ' + value.name.toUpperCase();
+    detailTitle.textContent = value.headline;
+    detailDescription.textContent = value.description;
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      striveDetail.querySelector('.value-detail-copy')?.animate(
+        [{opacity:.45,transform:'translateY(7px)'},{opacity:1,transform:'translateY(0)'}],
+        {duration:320,easing:'cubic-bezier(.2,.7,.2,1)'}
+      );
+    }
+  }));
+}
