@@ -42,9 +42,9 @@ if (striveButtons.length && striveDetail) {
   const detailEyebrow = striveDetail.querySelector('[data-strive-detail-eyebrow]');
   const detailTitle = striveDetail.querySelector('[data-strive-detail-title]');
   const detailDescription = striveDetail.querySelector('[data-strive-detail-description]');
-  striveButtons.forEach(button => button.addEventListener('click', () => {
+  const selectStriveValue = button => {
     const value = striveValueCopy[button.dataset.striveValue];
-    if (!value) return;
+    if (!value || button.getAttribute('aria-pressed') === 'true') return;
     const cardDescription = button.querySelector('[data-strive-card-description]');
     if (cardDescription) cardDescription.textContent = value.description;
     striveButtons.forEach(option => {
@@ -62,7 +62,14 @@ if (striveButtons.length && striveDetail) {
         {duration:320,easing:'cubic-bezier(.2,.7,.2,1)'}
       );
     }
-  }));
+  };
+  striveButtons.forEach(button => {
+    button.addEventListener('click', () => selectStriveValue(button));
+    button.addEventListener('pointerenter', event => {
+      if (event.pointerType !== 'touch') selectStriveValue(button);
+    });
+    button.addEventListener('focus', () => selectStriveValue(button));
+  });
 }
 const scrollTopButton = document.createElement('button');
 scrollTopButton.className = 'scroll-to-top';
