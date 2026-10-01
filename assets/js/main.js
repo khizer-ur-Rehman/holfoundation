@@ -62,3 +62,17 @@ if (striveButtons.length && striveDetail) {
     }
   }));
 }
+const scrollTopButton = document.createElement('button');
+scrollTopButton.className = 'scroll-to-top';
+scrollTopButton.type = 'button';
+scrollTopButton.setAttribute('aria-label', 'Scroll to top');
+scrollTopButton.title = 'Back to top';
+scrollTopButton.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5M6 11l6-6 6 6" /></svg>';
+document.body.append(scrollTopButton);
+const updateScrollTopButton = () => scrollTopButton.classList.toggle('is-visible', window.scrollY > 360);
+window.addEventListener('scroll', updateScrollTopButton, { passive: true });
+updateScrollTopButton();
+scrollTopButton.addEventListener('click', () => {
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  window.scrollTo({ top: 0, behavior: reducedMotion ? 'auto' : 'smooth' });
+});

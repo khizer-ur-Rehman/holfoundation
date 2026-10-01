@@ -1246,3 +1246,11 @@ body{background:#f8f7f0}
 .journey-list li>div {
     text-align: center;
 }
+
+/* Floating back-to-top control */
+.scroll-to-top{position:fixed;right:clamp(16px,3vw,30px);bottom:clamp(16px,3vw,28px);z-index:40;display:grid;width:48px;height:48px;place-items:center;padding:0;border:1px solid rgba(255,255,255,.78);border-radius:50%;background:#69c934;color:#16392b;box-shadow:0 8px 24px rgba(10,39,27,.24);opacity:0;visibility:hidden;transform:translateY(10px);cursor:pointer;transition:opacity .22s,visibility .22s,transform .22s,background .22s,box-shadow .22s}
+.scroll-to-top.is-visible{opacity:1;visibility:visible;transform:translateY(0)}
+.scroll-to-top:hover{transform:translateY(-3px);background:#b8df87;box-shadow:0 11px 25px rgba(10,39,27,.28)}
+.scroll-to-top:focus-visible{outline:3px solid #183e2f;outline-offset:4px}
+.scroll-to-top svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.2}
+@media(prefers-reduced-motion:reduce){.scroll-to-top{transition:none}}
