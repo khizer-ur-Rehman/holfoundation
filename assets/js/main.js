@@ -36,12 +36,19 @@ const striveValueCopy = {
   empathy: {letter:'E',number:'06',name:'Empathy',headline:'Lead with empathy.',description:'We listen closely and respond with care.'}
 };
 const striveButtons = [...document.querySelectorAll('.value-select[data-strive-value]')];
+const strivePath = document.querySelector('.strive-path');
 const striveDetail = document.querySelector('#strive-detail');
 if (striveButtons.length && striveDetail) {
   const detailLetter = striveDetail.querySelector('[data-strive-detail-letter]');
   const detailEyebrow = striveDetail.querySelector('[data-strive-detail-eyebrow]');
   const detailTitle = striveDetail.querySelector('[data-strive-detail-title]');
   const detailDescription = striveDetail.querySelector('[data-strive-detail-description]');
+  const setStriveTrack = selectedButton => {
+    strivePath?.style.setProperty(
+      '--strive-grid-columns',
+      striveButtons.map(option => option === selectedButton ? '2.1fr' : '1fr').join(' ')
+    );
+  };
   const selectStriveValue = button => {
     const value = striveValueCopy[button.dataset.striveValue];
     if (!value || button.getAttribute('aria-pressed') === 'true') return;
@@ -52,6 +59,8 @@ if (striveButtons.length && striveDetail) {
       option.setAttribute('aria-pressed', String(selected));
       option.closest('.value-stop')?.classList.toggle('is-selected', selected);
     });
+    setStriveTrack(button);
+
     detailLetter.textContent = value.letter;
     detailEyebrow.textContent = value.name.toUpperCase();
     detailTitle.textContent = value.headline;
@@ -70,6 +79,8 @@ if (striveButtons.length && striveDetail) {
     });
     button.addEventListener('focus', () => selectStriveValue(button));
   });
+  const initiallySelected = striveButtons.find(button => button.getAttribute('aria-pressed') === 'true') || striveButtons[0];
+  if (initiallySelected) setStriveTrack(initiallySelected);
 }
 const scrollTopButton = document.createElement('button');
 scrollTopButton.className = 'scroll-to-top';
