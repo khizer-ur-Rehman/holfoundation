@@ -47,3 +47,10 @@
 .journey-page details.journey-year-group{display:block;width:100%;height:auto;min-width:0;max-width:none;font-size:inherit}
 .journey-page .journey-event{display:block;min-height:0;border-left:2px solid #8ab966}
 .journey-page .journey-event-index{display:none}
+/* Expanded year panels use the foundation green palette. */
+.journey-page .journey-year-group[open]{border-color:rgba(255,255,255,.2);background:radial-gradient(ellipse at 100% 0%,rgba(124,183,81,.16),transparent 38%),linear-gradient(125deg,#174936,#10392d);color:#fff;box-shadow:0 16px 38px rgba(18,61,48,.16)}
+.journey-page .journey-year-group[open] .journey-year-number{border-color:rgba(255,255,255,.28);background:rgba(255,255,255,.1);color:#fff;font-size:14px}
+.journey-page .journey-year-group[open] .journey-year-label{color:#fff;font-size:14px}
+.journey-page .journey-year-group[open] .journey-year-toggle{border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.12);color:#fff}
+.journey-page .journey-year-group[open] .journey-event{border-color:rgba(255,255,255,.2);border-left:2px solid #a8d875;background:rgba(255,255,255,.055);color:#fff}
+.journey-page .journey-year-group[open] .journey-event h2,.journey-page .journey-year-group[open] .journey-event p{color:#fff;font-size:14px}
