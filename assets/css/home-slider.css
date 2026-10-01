@@ -1184,3 +1184,29 @@ body{background:#f8f7f0}
 .values-section.strive-redesign .value-detail-signoff{display:none}
 @media(max-width:940px){.values-section.strive-redesign .value-detail{grid-template-columns:52px minmax(0,1fr);min-height:116px;gap:15px;padding:17px 19px}.values-section.strive-redesign .value-detail-letter{width:50px;height:50px;font-size:29px}}
 @media(max-width:600px){.values-section.strive-redesign .value-detail{grid-template-columns:42px minmax(0,1fr);min-height:0;gap:12px;padding:15px 13px}.values-section.strive-redesign .value-detail-letter{width:40px;height:40px;border-radius:12px;font-size:24px}.values-section.strive-redesign .value-detail-copy h3{font-size:17px}.values-section.strive-redesign .value-detail-copy p{font-size:13px;line-height:1.4}}
+
+/* Simple STRIVE selectors and a light, compact detail panel */
+.values-section.strive-redesign{padding:70px 0 76px;background:radial-gradient(ellipse at 90% 2%,rgba(219,231,205,.42),transparent 30%),#f4f4ed}
+.values-section.strive-redesign .values-heading{grid-template-columns:minmax(0,1fr) minmax(240px,.62fr);align-items:end;gap:34px;margin-bottom:25px}
+.values-section.strive-redesign .values-title{max-width:780px;font-size:clamp(36px,4vw,50px);line-height:1.08;letter-spacing:-.05em}
+.values-section.strive-redesign .values-summary{max-width:360px;margin:0 0 4px;padding-left:15px;border-left:2px solid #83bd55;color:#65736a;font-size:14px;line-height:1.55}
+.values-section.strive-redesign .strive-path{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:4px;margin:0;padding:7px;border:1px solid #e1e6db;border-radius:16px;background:rgba(255,255,255,.78);box-shadow:0 10px 28px rgba(29,53,36,.045);list-style:none}
+.values-section.strive-redesign .value-stop,.values-section.strive-redesign .value-stop:hover{display:block;min-width:0;min-height:0;padding:0;border:0;border-radius:11px;background:transparent;box-shadow:none}
+.values-section.strive-redesign .value-select{position:relative;display:flex;width:100%;min-height:61px;flex-direction:row;align-items:center;justify-content:flex-start;gap:11px;overflow:hidden;padding:12px 15px;border:1px solid transparent;border-radius:10px;background:transparent;box-shadow:none;color:#26382d;text-align:left;transition:background .2s,border-color .2s,color .2s}
+.values-section.strive-redesign .value-select:before,.values-section.strive-redesign .value-select:after{display:none}
+.values-section.strive-redesign .value-select:hover{transform:none;border-color:#e1e8dc;background:#eef3e9;box-shadow:none}
+.values-section.strive-redesign .value-select:focus-visible{outline:3px solid #8ac95a;outline-offset:2px}
+.values-section.strive-redesign .value-index,.values-section.strive-redesign .value-action{display:none}
+.values-section.strive-redesign .value-marker{display:block;width:auto;height:auto;flex:0 0 auto;margin:0;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;color:var(--value-accent);font-size:14px;font-weight:850;line-height:1}
+.values-section.strive-redesign .value-copy{display:block;min-width:0;margin:0}
+.values-section.strive-redesign .value-copy strong{color:#26382d;font-size:14px;line-height:1.3;font-weight:750;letter-spacing:-.01em}
+.values-section.strive-redesign .value-stop.is-selected .value-select{transform:none;border-color:#173f2e;background:#173f2e;box-shadow:0 6px 15px rgba(20,55,39,.13);color:#fff}
+.values-section.strive-redesign .value-stop.is-selected .value-marker{background:none;color:#b8df87;transform:none}
+.values-section.strive-redesign .value-stop.is-selected .value-copy strong{color:#fff}
+.values-section.strive-redesign .value-detail{grid-template-columns:minmax(0,1fr);min-height:0;margin-top:12px;padding:18px 23px;border:1px solid #e1e6db;border-left:3px solid #83bd55;border-radius:13px;background:rgba(255,255,255,.8);box-shadow:0 8px 22px rgba(29,53,36,.04);color:#213329}
+.values-section.strive-redesign .value-detail:after,.values-section.strive-redesign .value-detail-letter,.values-section.strive-redesign .value-detail-eyebrow,.values-section.strive-redesign .value-detail-signoff{display:none}
+.values-section.strive-redesign .value-detail-copy{display:grid;grid-template-columns:minmax(220px,.7fr) minmax(0,1fr);align-items:center;gap:20px;max-width:100%}
+.values-section.strive-redesign .value-detail-copy h3{margin:0;color:#203329;font-size:clamp(18px,1.8vw,22px);line-height:1.25;letter-spacing:-.025em}
+.values-section.strive-redesign .value-detail-copy p{max-width:650px;margin:0;color:#65736a;font-size:14px;line-height:1.5}
+@media(max-width:940px){.values-section.strive-redesign{padding:62px 0 68px}.values-section.strive-redesign .values-heading{gap:25px}.values-section.strive-redesign .strive-path{grid-template-columns:repeat(3,minmax(0,1fr))}.values-section.strive-redesign .value-detail-copy{grid-template-columns:minmax(180px,.7fr) minmax(0,1fr);gap:16px}}
+@media(max-width:600px){.values-section.strive-redesign{padding:52px 0 58px}.values-section.strive-redesign .values-heading{grid-template-columns:1fr;gap:8px;margin-bottom:19px}.values-section.strive-redesign .values-title{font-size:clamp(32px,8vw,40px)}.values-section.strive-redesign .values-summary{max-width:none;margin:0;padding-left:12px;font-size:13px}.values-section.strive-redesign .strive-path{grid-template-columns:repeat(2,minmax(0,1fr));gap:3px;padding:6px;border-radius:13px}.values-section.strive-redesign .value-select{min-height:52px;padding:10px 11px;gap:9px}.values-section.strive-redesign .value-copy strong{font-size:13px}.values-section.strive-redesign .value-detail{margin-top:10px;padding:15px 16px}.values-section.strive-redesign .value-detail-copy{grid-template-columns:1fr;gap:5px}.values-section.strive-redesign .value-detail-copy h3{font-size:18px}.values-section.strive-redesign .value-detail-copy p{font-size:13px;line-height:1.45}}

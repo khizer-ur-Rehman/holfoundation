@@ -28,12 +28,12 @@ if(heroSlides.length>1){let activeSlide=0;let autoplay=null;let paused=false;con
 
 /* Interactive STRIVE values */
 const striveValueCopy = {
-  strength: {letter:'S',number:'01',name:'Strength',headline:'Build on local strengths.',description:'We turn community talent into opportunity.'},
-  tenacity: {letter:'T',number:'02',name:'Tenacity',headline:'Keep moving forward.',description:'We adapt, persist and celebrate progress.'},
-  respect: {letter:'R',number:'03',name:'Respect',headline:'Listen with respect.',description:'We value every voice and choice.'},
-  integrity: {letter:'I',number:'04',name:'Integrity',headline:'Act with integrity.',description:'We are honest, responsible and dependable.'},
-  vision: {letter:'V',number:'05',name:'Vision',headline:'Make room for possibility.',description:'Learning and skills open paths to brighter futures.'},
-  empathy: {letter:'E',number:'06',name:'Empathy',headline:'Lead with empathy.',description:'We listen and respond to real needs.'}
+  strength: {letter:'S',number:'01',name:'Strength',headline:'Build on local strengths.',description:'We grow local strengths into opportunity.'},
+  tenacity: {letter:'T',number:'02',name:'Tenacity',headline:'Keep moving forward.',description:'We keep showing up and move forward.'},
+  respect: {letter:'R',number:'03',name:'Respect',headline:'Listen with respect.',description:'We respect every voice and choice.'},
+  integrity: {letter:'I',number:'04',name:'Integrity',headline:'Act with integrity.',description:'We act honestly and follow through.'},
+  vision: {letter:'V',number:'05',name:'Vision',headline:'See what is possible.',description:'Learning and skills open new paths.'},
+  empathy: {letter:'E',number:'06',name:'Empathy',headline:'Lead with empathy.',description:'We listen and respond with care.'}
 };
 const striveButtons = [...document.querySelectorAll('.value-select[data-strive-value]')];
 const striveDetail = document.querySelector('#strive-detail');
@@ -51,7 +51,7 @@ if (striveButtons.length && striveDetail) {
       option.closest('.value-stop')?.classList.toggle('is-selected', selected);
     });
     detailLetter.textContent = value.letter;
-    detailEyebrow.textContent = value.number + ' / 06 \u00B7 ' + value.name.toUpperCase();
+    detailEyebrow.textContent = value.name.toUpperCase();
     detailTitle.textContent = value.headline;
     detailDescription.textContent = value.description;
     if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
