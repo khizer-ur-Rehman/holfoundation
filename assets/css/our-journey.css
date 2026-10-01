@@ -54,3 +54,10 @@
 .journey-page .journey-year-group[open] .journey-year-toggle{border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.12);color:#fff}
 .journey-page .journey-year-group[open] .journey-event{border-color:rgba(255,255,255,.2);border-left:2px solid #a8d875;background:rgba(255,255,255,.055);color:#fff}
 .journey-page .journey-year-group[open] .journey-event h2,.journey-page .journey-year-group[open] .journey-event p{color:#fff;font-size:14px}
+
+/* Timeline photos */
+.journey-page .journey-event-photo{height:auto;margin:0 0 14px;overflow:hidden;border-radius:9px;background:#e5eddf;aspect-ratio:16/10}
+.journey-page .journey-event-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .55s ease}
+.journey-page .journey-event:hover .journey-event-photo img{transform:scale(1.02)}
+.journey-page .journey-year-group[open] .journey-event-photo{border:1px solid rgba(255,255,255,.2)}
+@media(prefers-reduced-motion:reduce){.journey-page .journey-event-photo img{transition:none}}
