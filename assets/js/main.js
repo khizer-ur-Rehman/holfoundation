@@ -28,12 +28,12 @@ if(heroSlides.length>1){let activeSlide=0;let autoplay=null;let paused=false;con
 
 /* Interactive STRIVE values */
 const striveValueCopy = {
-  strength: {letter:'S',number:'01',name:'Strength',headline:'Build on what is already strong.',description:'We recognize the talent, resilience and knowledge within Lyari, then help people turn those strengths into opportunities to learn and grow.'},
-  tenacity: {letter:'T',number:'02',name:'Tenacity',headline:'Stay committed, even when progress takes time.',description:'We keep showing up, adapt when challenges arise and celebrate each step as learners and families move forward.'},
-  respect: {letter:'R',number:'03',name:'Respect',headline:'Listen first. Treat every person with dignity.',description:'We honor each person\'s voice, background and choices, and work alongside the community as a trusted partner.'},
-  integrity: {letter:'I',number:'04',name:'Integrity',headline:'Earn trust by following through.',description:'We communicate honestly, act responsibly and take care with the trust people place in HOL Foundation.'},
-  vision: {letter:'V',number:'05',name:'Vision',headline:'See possibility, then create a path to it.',description:'We connect education and practical skills to help children, young people and families shape brighter futures.'},
-  empathy: {letter:'E',number:'06',name:'Empathy',headline:'Understand people before deciding how to help.',description:'We listen with care and respond to the real circumstances, hopes and needs of each person and family.'}
+  strength: {letter:'S',number:'01',name:'Strength',headline:'Build on local strengths.',description:'We turn community talent into opportunity.'},
+  tenacity: {letter:'T',number:'02',name:'Tenacity',headline:'Keep moving forward.',description:'We adapt, persist and celebrate progress.'},
+  respect: {letter:'R',number:'03',name:'Respect',headline:'Listen with respect.',description:'We value every voice and choice.'},
+  integrity: {letter:'I',number:'04',name:'Integrity',headline:'Act with integrity.',description:'We are honest, responsible and dependable.'},
+  vision: {letter:'V',number:'05',name:'Vision',headline:'Make room for possibility.',description:'Learning and skills open paths to brighter futures.'},
+  empathy: {letter:'E',number:'06',name:'Empathy',headline:'Lead with empathy.',description:'We listen and respond to real needs.'}
 };
 const striveButtons = [...document.querySelectorAll('.value-select[data-strive-value]')];
 const striveDetail = document.querySelector('#strive-detail');

@@ -1174,3 +1174,13 @@ body{background:#f8f7f0}
 /* Slightly stronger contrast overlay for the donation CTA */
 .cta-band.cta-donate{background-image:linear-gradient(rgba(5,24,17,.68),rgba(5,24,17,.68)),url("../images/about/community-support.webp")}
 @media(max-width:650px){.cta-band.cta-donate{background-image:linear-gradient(rgba(5,24,17,.74),rgba(5,24,17,.74)),url("../images/about/community-support.webp")}}
+
+/* Shorter, tighter STRIVE value details */
+.values-section.strive-redesign .value-detail{grid-template-columns:58px minmax(0,1fr);gap:18px;min-height:126px;margin-top:13px;padding:18px 23px;border-radius:16px}
+.values-section.strive-redesign .value-detail-letter{width:54px;height:54px;border-radius:16px;font-size:32px}
+.values-section.strive-redesign .value-detail-copy{max-width:760px}
+.values-section.strive-redesign .value-detail-copy h3{margin:5px 0 4px;font-size:clamp(18px,1.8vw,22px)}
+.values-section.strive-redesign .value-detail-copy p{max-width:650px;font-size:14px;line-height:1.45}
+.values-section.strive-redesign .value-detail-signoff{display:none}
+@media(max-width:940px){.values-section.strive-redesign .value-detail{grid-template-columns:52px minmax(0,1fr);min-height:116px;gap:15px;padding:17px 19px}.values-section.strive-redesign .value-detail-letter{width:50px;height:50px;font-size:29px}}
+@media(max-width:600px){.values-section.strive-redesign .value-detail{grid-template-columns:42px minmax(0,1fr);min-height:0;gap:12px;padding:15px 13px}.values-section.strive-redesign .value-detail-letter{width:40px;height:40px;border-radius:12px;font-size:24px}.values-section.strive-redesign .value-detail-copy h3{font-size:17px}.values-section.strive-redesign .value-detail-copy p{font-size:13px;line-height:1.4}}
