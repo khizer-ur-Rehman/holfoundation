@@ -29,11 +29,11 @@ if(heroSlides.length>1){let activeSlide=0;let autoplay=null;let paused=false;con
 /* Interactive STRIVE values */
 const striveValueCopy = {
   strength: {letter:'S',number:'01',name:'Strength',headline:'Build on local strengths.',description:'We grow local strengths into opportunity.'},
-  tenacity: {letter:'T',number:'02',name:'Tenacity',headline:'Keep moving forward.',description:'We keep showing up and move forward.'},
-  respect: {letter:'R',number:'03',name:'Respect',headline:'Listen with respect.',description:'We respect every voice and choice.'},
-  integrity: {letter:'I',number:'04',name:'Integrity',headline:'Act with integrity.',description:'We act honestly and follow through.'},
-  vision: {letter:'V',number:'05',name:'Vision',headline:'See what is possible.',description:'Learning and skills open new paths.'},
-  empathy: {letter:'E',number:'06',name:'Empathy',headline:'Lead with empathy.',description:'We listen and respond with care.'}
+  tenacity: {letter:'T',number:'02',name:'Tenacity',headline:'Keep moving forward.',description:'We keep showing up and moving forward.'},
+  respect: {letter:'R',number:'03',name:'Respect',headline:'Listen with respect.',description:'We listen, include and learn together.'},
+  integrity: {letter:'I',number:'04',name:'Integrity',headline:'Act with integrity.',description:'We act honestly and honor commitments.'},
+  vision: {letter:'V',number:'05',name:'Vision',headline:'See what is possible.',description:'We make space for brighter possibilities.'},
+  empathy: {letter:'E',number:'06',name:'Empathy',headline:'Lead with empathy.',description:'We listen closely and respond with care.'}
 };
 const striveButtons = [...document.querySelectorAll('.value-select[data-strive-value]')];
 const striveDetail = document.querySelector('#strive-detail');
@@ -45,6 +45,8 @@ if (striveButtons.length && striveDetail) {
   striveButtons.forEach(button => button.addEventListener('click', () => {
     const value = striveValueCopy[button.dataset.striveValue];
     if (!value) return;
+    const cardDescription = button.querySelector('[data-strive-card-description]');
+    if (cardDescription) cardDescription.textContent = value.description;
     striveButtons.forEach(option => {
       const selected = option === button;
       option.setAttribute('aria-pressed', String(selected));
