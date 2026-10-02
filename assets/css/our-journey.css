@@ -78,42 +78,24 @@
 .journey-page .journey-hero-visual figcaption strong{font-size:18px}
 @media(max-width:850px){.journey-page .journey-hero-grid{grid-template-columns:1fr;gap:28px}.journey-page .journey-hero-visual{height:clamp(320px,56vw,470px);margin:8px 12px 12px 0}}
 @media(max-width:600px){.journey-page .journey-hero-visual{height:clamp(270px,78vw,370px);margin:6px 9px 9px 0;border-width:6px;border-radius:66px 18px 18px 18px;box-shadow:7px 8px 0 rgba(112,212,47,.48),0 18px 36px rgba(24,61,51,.15)}.journey-page .journey-hero-visual figcaption{right:12px;bottom:12px;max-width:calc(100% - 24px);padding:11px 13px}.journey-page .journey-hero-visual figcaption strong{font-size:15px}}
-/* Match the Donate page's warm terracotta, cream and gold palette. */
-.journey-page{--journey-ink:#4e303a;--journey-primary:#68404a;--journey-accent:#d79a38;--journey-muted:#65565a;--journey-paper:#fbf6ee;background:var(--journey-paper);color:var(--journey-ink)}
-.journey-hero{background:radial-gradient(ellipse at 85% 10%,rgba(215,154,56,.12),transparent 34%),#f3e6d7}
-.journey-hero:before{border-color:rgba(104,64,74,.12);box-shadow:0 0 0 24px rgba(184,95,74,.035),0 0 0 52px rgba(184,95,74,.02)}
-.journey-eyebrow>i{box-shadow:0 0 0 5px rgba(215,154,56,.18)}
-.journey-story-link span{border-color:rgba(104,64,74,.16)}
-.journey-hero-visual{border-color:rgba(104,64,74,.16);box-shadow:0 25px 58px rgba(104,64,74,.16)}
-.journey-milestones{background:radial-gradient(ellipse at 8% 15%,rgba(215,154,56,.09),transparent 30%),#fbf6ee}
-.journey-milestones-list:before{background:linear-gradient(180deg,rgba(215,154,56,.22),var(--journey-accent) 18%,var(--journey-primary) 52%,var(--journey-accent) 85%,rgba(215,154,56,.2))}
-.journey-milestone-copy{border-color:#eadfd5;border-left-color:var(--journey-accent);border-radius:7px;box-shadow:0 14px 34px rgba(104,64,74,.07)}
-.journey-milestone:hover .journey-milestone-copy{border-color:rgba(215,154,56,.7);box-shadow:0 20px 40px rgba(104,64,74,.12)}
-.journey-milestone-marker{box-shadow:0 0 0 6px rgba(215,154,56,.16)}
-.journey-milestone-photos{border-color:#eadfd5;border-radius:7px;background:#fffdf9;box-shadow:0 16px 34px rgba(104,64,74,.1)}
-.journey-milestone:hover .journey-milestone-photos{box-shadow:0 22px 42px rgba(104,64,74,.15)}
-.journey-milestone-years{border-color:rgba(104,64,74,.12);background:#f8e7d5}
-.journey-promise{background:#68404a}
-.journey-promise-shade{background:linear-gradient(90deg,rgba(47,36,42,.08) 0%,rgba(69,44,50,.36) 40%,rgba(50,37,44,.94) 100%)}
-.journey-promise-copy>a{border-color:#d79a38;background:#d79a38;color:#342a27}
-@media(max-width:600px){.journey-promise-shade{background:linear-gradient(0deg,rgba(50,37,44,.96) 0%,rgba(69,44,50,.7) 48%,rgba(69,44,50,.08) 100%)}.journey-milestone-marker{box-shadow:0 0 0 4px rgba(215,154,56,.16)}}
-
-/* Use the live homepage palette: navy, gold and warm cream. */
-.journey-page{--journey-ink:#172630;--journey-primary:#173b5c;--journey-accent:#e9b94f;--journey-muted:#65747b;--journey-paper:#f6f3eb}
-.journey-hero{background:radial-gradient(ellipse at 85% 10%,rgba(233,185,79,.16),transparent 34%),#f6f3eb}
-.journey-hero:before{border-color:rgba(23,59,92,.12);box-shadow:0 0 0 24px rgba(23,59,92,.035),0 0 0 52px rgba(23,59,92,.02)}
-.journey-eyebrow>i{box-shadow:0 0 0 5px rgba(233,185,79,.2)}
-.journey-story-link span{border-color:rgba(23,59,92,.16)}
-.journey-hero-visual{border-color:rgba(23,59,92,.16);box-shadow:0 25px 58px rgba(23,59,92,.16)}
-.journey-milestones{background:radial-gradient(ellipse at 8% 15%,rgba(233,185,79,.1),transparent 30%),#eef2f1}
-.journey-milestones-list:before{background:linear-gradient(180deg,rgba(233,185,79,.25),var(--journey-accent) 18%,var(--journey-primary) 52%,var(--journey-accent) 85%,rgba(233,185,79,.2))}
-.journey-milestone-copy{border-color:#d8e0df;border-left-color:var(--journey-accent);box-shadow:0 14px 34px rgba(23,59,92,.07)}
-.journey-milestone:hover .journey-milestone-copy{border-color:rgba(233,185,79,.8);box-shadow:0 20px 40px rgba(23,59,92,.12)}
-.journey-milestone-marker{border-color:var(--journey-primary);box-shadow:0 0 0 6px rgba(233,185,79,.2)}
-.journey-milestone-photos{border-color:#d8e0df;background:#fffefa;box-shadow:0 16px 34px rgba(23,59,92,.1)}
-.journey-milestone:hover .journey-milestone-photos{box-shadow:0 22px 42px rgba(23,59,92,.15)}
-.journey-milestone-years{border-color:rgba(23,59,92,.12);background:rgba(233,185,79,.2);color:var(--journey-primary)}
-.journey-promise{background:var(--journey-primary)}
-.journey-promise-shade{background:linear-gradient(90deg,rgba(9,35,54,.08) 0%,rgba(9,35,54,.36) 40%,rgba(9,35,54,.94) 100%)}
-.journey-promise-copy>a{border-color:var(--journey-accent);background:var(--journey-accent);color:#172630}
-@media(max-width:600px){.journey-promise-shade{background:linear-gradient(0deg,rgba(9,35,54,.96) 0%,rgba(9,35,54,.7) 48%,rgba(9,35,54,.08) 100%)}.journey-milestone-marker{box-shadow:0 0 0 4px rgba(233,185,79,.2)}}
+/* Match the shared HOL Foundation forest green, leaf green and soft cream theme. */
+.journey-page{--journey-ink:#172820;--journey-primary:#103a2e;--journey-accent:#a6d878;--journey-muted:#6c7b72;--journey-paper:#f5f6ef;--line:#dce4d7;--light:#fff;background:var(--journey-paper);color:var(--journey-ink)}
+.journey-hero{background:radial-gradient(ellipse at 85% 10%,rgba(166,216,120,.2),transparent 34%),var(--journey-paper)}
+.journey-hero:before{border-color:rgba(16,58,46,.12);box-shadow:0 0 0 24px rgba(16,58,46,.035),0 0 0 52px rgba(16,58,46,.02)}
+.journey-eyebrow{color:#548d42}
+.journey-eyebrow>i{background:#e6b342;box-shadow:0 0 0 5px rgba(230,179,66,.15)}
+.journey-hero h1 em{color:#548d42}
+.journey-story-link{color:var(--journey-primary)}
+.journey-story-link span{border-color:rgba(16,58,46,.15);background:var(--journey-accent);color:var(--journey-primary)}
+.journey-hero-visual{border-color:rgba(16,58,46,.15);box-shadow:12px 13px 0 rgba(166,216,120,.48),0 25px 58px rgba(16,58,46,.16)}
+.journey-milestones{background:radial-gradient(ellipse at 8% 15%,rgba(166,216,120,.12),transparent 30%),#fff}
+.journey-milestone-copy{border-color:#dce4d7;border-left-color:#548d42;box-shadow:0 14px 34px rgba(16,58,46,.07)}
+.journey-milestone:hover .journey-milestone-copy{border-color:rgba(166,216,120,.85);box-shadow:0 20px 40px rgba(16,58,46,.12)}
+.journey-milestone-marker{border-color:var(--journey-primary);background:var(--journey-accent);box-shadow:0 0 0 6px rgba(166,216,120,.2)}
+.journey-milestone-photos{border-color:#dce4d7;background:#fff;box-shadow:0 16px 34px rgba(16,58,46,.1)}
+.journey-milestone:hover .journey-milestone-photos{box-shadow:0 22px 42px rgba(16,58,46,.15)}
+.journey-milestone-years{border-color:rgba(16,58,46,.12);background:rgba(166,216,120,.2);color:var(--journey-primary)}
+.journey-promise{background:#103a2e}
+.journey-promise-shade{background:linear-gradient(90deg,rgba(16,58,46,.08) 0%,rgba(16,58,46,.36) 40%,rgba(16,58,46,.94) 100%)}
+.journey-promise-copy>a{border-color:var(--journey-accent);background:var(--journey-accent);color:var(--journey-primary)}
+@media(max-width:600px){.journey-promise-shade{background:linear-gradient(0deg,rgba(16,58,46,.96) 0%,rgba(16,58,46,.7) 48%,rgba(16,58,46,.08) 100%)}.journey-milestone-marker{box-shadow:0 0 0 4px rgba(166,216,120,.2)}}
