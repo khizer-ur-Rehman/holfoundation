@@ -1,4 +1,4 @@
-﻿.about-page{--about-ink:#172820;--about-deep:#103a2e;--about-green:#548d42;--about-lime:#a6d878;--about-muted:#6c7b72;--about-line:#dce4d7;background:#f5f6ef;color:var(--about-ink);overflow:hidden}
+.about-page{--about-ink:#172820;--about-deep:#103a2e;--about-green:#548d42;--about-lime:#a6d878;--about-muted:#6c7b72;--about-line:#dce4d7;background:#f5f6ef;color:var(--about-ink);overflow:hidden}
 .about-page .container{width:min(1320px,calc(100% - 64px))}
 .about-hero{position:relative;padding:66px 0 76px;background:radial-gradient(ellipse at 82% 10%,rgba(197,220,176,.25),transparent 35%),#f5f6ef}
 .about-hero-layout{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(38px,6.2vw,94px);align-items:center}
@@ -140,3 +140,12 @@
 @media(max-width:900px){.about-founder-copy,.about-founder-photo{grid-column:1;grid-row:auto}.about-founder-photo{grid-row:1}}
 @media(max-width:620px){.about-founder-vision{grid-template-columns:1fr;gap:5px;margin-top:16px;padding-top:12px}}
 .about-page p{font-size:14px!important}
+
+/* Keep the About page video aligned and comfortably sized */
+.about-page .journey-section{padding:clamp(52px,6vw,78px) 0}
+.about-page .journey-section .journey-layout{display:block;width:min(1240px,calc(100% - 64px));margin:0 auto}
+.about-page .journey-section .journey-intro{display:block;width:min(980px,100%);margin:0 auto 24px}
+.about-page .journey-section .journey-intro .section-title{max-width:none;margin:0;font-size:clamp(38px,4.7vw,58px);line-height:1.04}
+.about-page .journey-section .journey-film{width:min(980px,100%);margin:0 auto}
+.about-page .journey-section .journey-film-frame{aspect-ratio:16/9}
+@media(max-width:700px){.about-page .journey-section{padding:48px 0 54px}.about-page .journey-section .journey-layout{width:calc(100% - 36px)}.about-page .journey-section .journey-intro{margin-bottom:18px}.about-page .journey-section .journey-intro .section-title{font-size:clamp(34px,8.5vw,46px)}.about-page .journey-section .journey-film{padding:5px;border-radius:18px}.about-page .journey-section .journey-film-frame{border-radius:13px}}
